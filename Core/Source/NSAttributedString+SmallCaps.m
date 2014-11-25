@@ -21,7 +21,10 @@
 	}
 	
 	DTCoreTextFontDescriptor *smallerFontDesc = [fontDescriptor copy];
-	smallerFontDesc.pointSize *= (CGFloat)0.7;
+
+//  Prevent downsizing font when uppercase (old way to uppercase for studio)
+//	
+//	smallerFontDesc.pointSize *= (CGFloat)0.7;
 	
 	CTFontRef smallerFont = [smallerFontDesc newMatchingFont];
 	

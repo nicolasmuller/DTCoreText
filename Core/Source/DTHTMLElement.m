@@ -886,12 +886,15 @@ NSDictionary *_classesForNames = nil;
 					_fontDescriptor.fontFamily = @"Helvetica";
 					foundFontFamily = YES;
 				}
-				else if ([lowercaseFontFamily rangeOfString:@"cursive"].length)
-				{
-					_fontDescriptor.stylisticClass = kCTFontScriptsClass;
-					_fontDescriptor.fontFamily = nil;
-					foundFontFamily = YES;
-				}
+//				
+// 				Don't use their kCTFontScriptsClass for Cursive, we got own (Cursive standard) cursive font
+//				
+//				else if ([lowercaseFontFamily rangeOfString:@"cursive"].length)
+//				{
+//					_fontDescriptor.stylisticClass = kCTFontScriptsClass;
+//					_fontDescriptor.fontFamily = nil;
+//					foundFontFamily = YES;
+//				}
 				else if ([lowercaseFontFamily rangeOfString:@"sans-serif"].length)
 				{
 					// too many matches (24)
